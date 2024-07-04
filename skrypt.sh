@@ -21,7 +21,7 @@ case "$komenda" in
 done 
 ;;
 
-  "--error") while [ $x -le $y ]
+  "--error" | "-e") while [ $x -le $y ]
 	do
 		mkdir error"$x"
 		cd error"$x"
@@ -40,6 +40,7 @@ done
 		echo "--date - wyswietla obecna date i godzine"
 		echo "--logs x - przyjmuje argument x i w zaleznosci od argumentu generuje pliki od log1.txt do logx.txt"
 		echo "kazdy z plikow logx.txt zawiera date utworzenia, skrypt ktory go utworzyl oraz nazwe pliku"
+		echo "--error / -e tworzy foldery errorx zawierajace plik errorx.txt"
 ;;
   *) echo "Nic nie wybrałeś" ;;
 
