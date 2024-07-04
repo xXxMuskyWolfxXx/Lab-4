@@ -1,11 +1,16 @@
-#!/bin/bash
 komenda=$1
 x=1
+y=$2
+if [[ -z "$y" ]]
+then 
+	y=100
+fi
+
 case "$komenda" in
 
   "--date") date -u ;;
 
-  "--logs") while [ $x -le 100 ]
+  "--logs") while [ $x -le $y ]
 	do
 		touch log"$x".txt
 		echo log"$x".txt >> log"$x".txt
