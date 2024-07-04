@@ -9,9 +9,9 @@ fi
 
 case "$komenda" in
 
-  "--date") date -u ;;
+  "--date" | "-d") date -u ;;
 
-  "--logs") while [ $x -le $y ]
+  "--logs" | "-l") while [ $x -le $y ]
 	do
 		touch log"$x".txt
 		echo log"$x".txt >> log"$x".txt
@@ -21,6 +21,7 @@ case "$komenda" in
 done 
 ;;
 
+<<<<<<< HEAD
   "--error" | "-e") while [ $x -le $y ]
 	do
 		mkdir error"$x"
@@ -37,6 +38,9 @@ done
 
 
   "--help") echo "lista Komend"
+=======
+  "--help" | "-h") echo "lista Komend"
+>>>>>>> 5149d0b (added shorter versions for each of the commands)
 		echo "--date - wyswietla obecna date i godzine"
 		echo "--logs x - przyjmuje argument x i w zaleznosci od argumentu generuje pliki od log1.txt do logx.txt"
 		echo "kazdy z plikow logx.txt zawiera date utworzenia, skrypt ktory go utworzyl oraz nazwe pliku"
