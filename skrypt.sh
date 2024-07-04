@@ -1,5 +1,7 @@
 #!/bin/bash
+
 komenda=$1
+
 if [ "$komenda" == "--date" ]
 then
 	date -u
