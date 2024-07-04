@@ -40,9 +40,14 @@ done
   "--help") echo "lista Komend"
 =======
   "--help" | "-h") echo "lista Komend"
+<<<<<<< HEAD
 >>>>>>> 5149d0b (added shorter versions for each of the commands)
 		echo "--date - wyswietla obecna date i godzine"
 		echo "--logs x - przyjmuje argument x i w zaleznosci od argumentu generuje pliki od log1.txt do logx.txt"
+=======
+		echo "--date / -d - wyswietla obecna date i godzine"
+		echo "--logs / -l - x - przyjmuje argument x i w zaleznosci od argumentu generuje pliki od log1.txt do logx.txt"
+>>>>>>> dd9bf65 (added the shortened versions to the --help command)
 		echo "kazdy z plikow logx.txt zawiera date utworzenia, skrypt ktory go utworzyl oraz nazwe pliku"
 		echo "--error / -e tworzy foldery errorx zawierajace plik errorx.txt"
 ;;
