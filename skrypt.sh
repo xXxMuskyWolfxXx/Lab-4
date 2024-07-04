@@ -1,3 +1,4 @@
+#!/bin/bash
 komenda=$1
 x=1
 y=$2
@@ -20,6 +21,11 @@ case "$komenda" in
 done 
 ;;
 
+  "--help") echo "lista Komend"
+		echo "--date - wyswietla obecna date i godzine"
+		echo "--logs x - przyjmuje argument x i w zaleznosci od argumentu generuje pliki od log1.txt do logx.txt"
+		echo "kazdy z plikow logx.txt zawiera date utworzenia, skrypt ktory go utworzyl oraz nazwe pliku"
+  
   *) echo "Nic nie wybrałeś"
 
 esac
