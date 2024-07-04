@@ -21,6 +21,21 @@ case "$komenda" in
 done 
 ;;
 
+  "--error") while [ $x -le $y ]
+	do
+		mkdir error"$x"
+		cd error"$x"
+		touch error"$x".txt
+		echo error"$x".txt >> error"$x".txt
+		echo "utworzony przez skrypt.sh w dniu i godzinie:" >> error"$x".txt
+		date -u >> error"$x".txt
+		cd -
+		x=$[x+1]
+done 
+;;
+
+
+
   "--help") echo "lista Komend"
 		echo "--date - wyswietla obecna date i godzine"
 		echo "--logs x - przyjmuje argument x i w zaleznosci od argumentu generuje pliki od log1.txt do logx.txt"
